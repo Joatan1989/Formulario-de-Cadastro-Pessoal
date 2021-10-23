@@ -1,0 +1,249 @@
+<!-- Este é um método de documentação para renderizar HTML e UTF-8 -->
+<!DOCTYPE HTML>
+<!-- "lang" ajuda a definir o idioma de um elemento, por exemplo, a língua em que elementos não-editáveis são escritos, ou a língua em que elementos editáveis devem ser escritos pelo usuário. -->
+<html lang="pt-br">
+
+  <!-- Este método providencia metadados, título, links dos ícones, das fontes, do CSS, do JavaScript e o estilo interno -->
+  <head>
+    <!-- Um título da página (aparece na aba) -->
+    <title>Página de Cadastro</title>
+    <!-- Um metadado para renderizar os caracteres estrangeiros correctamente -->
+    <meta charset="UTF-8">
+    <!-- Um metadado de autor -->
+    <meta name="author" content="Joatan Novais Santos">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="esilo.css" media="screen">
+  </head>
+
+  <!-- Um corpo -->
+  <body>
+    <div> 
+    <!-- Um cabeçalho  -->
+    <header>
+      <!-- Um título de primeiro grau -->  
+      <h1 id = "título">Temos os melhores produtos desenvolvidos para você!</h1>
+      <!-- Parágrafos -->
+      <p id="subtitulo">Preencha os dados abaixo e te viaremos uma proposta.</p>
+      <br>
+    </header>
+  </div>
+  <br>
+    <!-- Conteúdo principal -->
+      <!-- Formulário, action é uma etiqueta para encaminhar para a próxima página caso seja enviado, e "get" é um método para pegar as informações -->
+      <form action="sucesso.html" method="get">
+
+         <!-- Campo de produtos para escolha de 1 ou mais opções para marcar 
+          (checkbox botão de seleção, o usuário pode selecionar quanta opções quiser) e css de classe "campo" -->
+         <!--Grupo-->
+        <fieldset class="grupo">
+        <div id ="check">
+          <label><strong >Selecione os produtos que deseja conhecer:</strong></label><br><br>
+          <input type="checkbox" id="produto1" name="produto1" value="conta corrente">
+          <label for="produto1"> conta corrente</label>
+          <input type="checkbox" id="produto2" name="produto2" value="Investimento">
+          <label for="produto2"> investimento</label>
+          <input type="checkbox" id="produto3" name="produto2" value="Empréstimo">
+          <label for="produto3"> Empréstimo</label>
+          <input type="checkbox" id="produto4" name="produto2" value="Consórcio">
+          <label for="produto4"> Consórcio</label>
+          </div>
+          </fieldset>
+          <br>
+
+        <!-- Grupo -->
+        <fieldset Class="gupo">
+          <div> 
+          <!-- Legenda do grupo -->
+          <legend><strong><u>Dados Pessoais:</u></strong></legend>
+          </div>
+        <br>
+          <!-- Uma etiqueta de rótulo da caixa de entrada -->
+          <div>
+          <label for="nome"> Nome:</label>
+          <!-- Uma caixa de entrada com um tipo como um texto, e com um identificador e nome pegados pela etiqueta "label", e required significa obrigatório -->
+          <input type="text" name="nome" id="nome" required>
+        
+          <label for="sobrenome">Sobrenome:</label>
+          <input type="text" name="sobrenome" id="sobrenome" required><br>
+          <br>
+          </div>
+
+          <div>
+          <label for="cpf"> CPF:</label>
+          <!-- maxlength significa limite de dígitos. Pensem no limite de dígitos de senha dos cartões e das contas correntes, e placeholder significa uma informacão de exemplo -->
+          <input tipe="text" name="cpf" maxlength="11" placeholder="insira somente números" id="cpf" required>
+
+          <label for="rg">RG:</label>
+          <input type="text" name="rg" maxlength="13" id="rg" required>
+
+          <label for="data">Data de Nascimento:</label>
+          <input type="date" name="data" id="data" required>
+           <br>
+           <br>
+           </div>
+           <div>
+          <label for="estadocivil">Estado civil:</label>
+          <!-- Um seletor de opções -->
+          <select name="estadocivil" id="estadocivil">
+            <option>Selecione...</option value="00">
+            <option>Solteiro (a)</option value="01">
+            <option>Casado (a)</option value="02">
+            <option>Outros</option value="03">
+          </select>
+
+          <label for="telfixo">Telefone fixo:</label>
+          <!-- Uma caixa de entrada com um tipo como um telefone -->
+          <input type="tel" name="telefonefixo" id="telfixo">
+
+          <label for="cel">Telefone celular:</label>
+          <input type="tel" name="telcelular" id="cel" required>
+          </div>
+        </fieldset>
+
+        <!-- Uma quebra de linha -->
+        <br>
+        <fieldset class="grupo">
+          <div>
+          <legend><strong><u>Sexo:</u></strong></legend>
+        <br>
+          <label for="sf"><i>Feminino</i></label>
+          <!-- Um seletor de escolha -->
+          <input type="radio" name="sexo" id="sf" value="f">
+
+          <br>
+          <label for="sm"><i>Masculino </i></label>
+          <input type="radio" name="sexo" id="sm" value="m">
+          </div>
+        </fieldset>
+        <br>
+        
+        <fieldset class="grupo">
+          <div>
+          <!-- Legenda do grupo: endereço -->
+          <legend><strong><u>Endereço:</u></strong></legend>
+          <br>
+          <label for="rua">Rua:</label>
+          <input type="text" name="rua" id="rua" required> 
+
+          <label for="numero">Número:</label>
+          <input type="text" name="numero" id="numero" required> 
+
+          <label for="bairro">Bairro:</label>
+          <input type="text" name="bairro" id="bairro" required><br>
+          <br> 
+
+          <label for="cidade">Cidade:</label>
+          <input type="text" name="cidade" id="cidade" required> 
+
+          <label for="estado">Estado:</label> 
+          <select name="estado" id="estado">
+            <option>Escolha seu estado...</option>
+            <option value="ac">Acre</option>
+            <option value="al">Alagoas</option>
+            <option value="am">Amazonas</option>
+            <option value="ap">Amapá</option>
+            <option value="ba">Bahia</option>
+            <option value="ce">Ceará</option>
+            <option value="df">Distrito Federal</option>
+            <option value="es">Espírito Santo</option>
+            <option value="go">Goiás</option>
+            <option value="ma">Maranhão</option>
+            <option value="mt">Mato Grosso</option>
+            <option value="ms">Mato Grosso do Sul</option>
+            <option value="mg">Minas Gerais</option>
+            <option value="pa">Pará</option>
+            <option value="pb">Paraíba</option>
+            <option value="pr">Paraná</option>
+            <option value="pe">Pernambuco</option>
+            <option value="pi">Piauí</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="rn">Rio Grande do Norte</option>
+            <option value="ro">Rondônia</option>
+            <option value="rs">Rio Grande do Sul</option>
+            <option value="rr">Roraima</option>
+            <option value="sc">Santa Catarina</option>
+            <option value="se">Sergipe</option>
+            <option value="sp">São Paulo</option>
+            <option value="to">Tocantins</option>
+          </select>
+         
+          <label for="cep">Cep: </label>
+          <input type="text" name="cep" maxlength="8" id="cep">
+          </div>
+        </fieldset>
+        <br>
+
+        <fieldset class="grupo">
+          <div>
+          <legend><i><strong><u>Login:</u></strong></i></legend>
+          <br>
+
+          <label for="email">e-mail:</label>
+          <!-- Uma caixa de entrada com um tipo como um e-mail -->
+          <input type="e-mail" name="email" placeholder="exemplo@gmail.com" id="email" required><br>
+          <br>
+
+          <label for="senha">Senha:</label>
+          <!-- Uma caixa de entrada com um tipo como uma senha -->
+          <input type="password" name="senha" placeholder="Mínimo 8 caracteres." id="senha" required><br>
+          <br>
+
+          <label for="confirmsenha">Confirme a senha:</label>
+          <input type="password" name="confirmar senha" id="confirmar senha" required><br>
+          </div>
+        </fieldset>
+        <br>
+
+        <div>
+        <label for="obs"><strong><u>Informações complementares:</u></strong></label><br>
+        <!-- Um corpo de mensagem --> 
+        <textarea rows="8" style="width: 60em;" name="observacao" id="obs" placeholder="Deixe sua mensagem:"> </textarea>
+        <br>
+          
+        <!-- Um botão com um método em JavaScript "onclick", que significa para clicar uma função -->
+        <input class="botao" type="submit" name="enviar" onclick="pergunta1();" value="Enviar">
+
+        <!-- Um botoão de limpar todo o formulário com um método que clica uma função -->
+        <input class="botao" type="reset" onclick="pergunta2();" value="Limpar">
+        </div>
+        <br>
+        <br>
+      
+      </form>
+
+    <!-- Um rodapé -->
+    <footer>
+      <p>
+        <i>@ Joatan Novais Santos</i><br>
+        <!-- Links -->
+        <a href="https://www.linkedin.com/in/joatan-novais-santos-6b8787123" target="_blank">Conecte-se comigo no Linkedin:</a><br>
+        <a href="https://github.com/Joatan1989" target="_blank">Meu projeto no GitHub:</a><br>
+        Projeto licensiado sob a <a> href="https://www.mit.edu/~amini/LICENSE.md" </a>
+      </p>
+    </footer>
+
+    <!-- Um script interno em JavaScript -->
+    <script>
+      // Uma função
+      function pergunta1() {
+        // Checa se quiser enviar no diálogo
+        if (confirm("Deseja enviar agora?")) 
+        {
+          return true;
+        }
+        // Senão
+        else 
+        {
+          return false;
+        }
+      }
+
+      // Uma função para informar de limpar
+      function pergunta2() {
+        alert("Todos os campos serão apagados.");
+      }
+    </script>
+   
+  </body>
+
+</html>
